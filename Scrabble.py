@@ -1,7 +1,8 @@
 # turimų raidzių įrašymas
 raides=(input())
-#print(sorted(list(raides)))
+print(sorted(list(raides)))
 # importuojami visi lietuviški žodžiai
+print(raides)
 with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.txt", encoding="UTF-8") as data_file:
     for line in data_file:
 # /n nuėmimas
@@ -24,6 +25,8 @@ Dar reikia:
     reikia prarasyti ka reikia irasyti
 
     reikia, kad parasytiu, kad nerado jei neranda
+
+    reikia, kad surusiuotu rastus žodžius pagal sudėtingumą
 
     
 
