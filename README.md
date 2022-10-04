@@ -6,7 +6,7 @@
 
 # Scrabble
 
-_personal project_
+personal project No 1
 
 -   [Scrabble stalo žaidimas](https://www.amazon.com/Hasbro-Gaming-A8166-Scrabble-Game/dp/B00IL5XY9K)
 
