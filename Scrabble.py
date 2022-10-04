@@ -16,11 +16,12 @@ with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.
 '''
 Dar reikia:
 
+
+  1.  reikia, kad parasytu, kad nerado jei neranda
+
   2.  kaip ieškoti 6 raidžių žodžių jei 7 nėra.
         pradžioj vieną raidę atmeta ir ieško
         jei nerandu, tuomet 2 raides atmetu ir ieškau žodžio
-
-  1.  reikia, kad parasytu, kad nerado jei neranda
 
   3.  reikia, kad surusiuotu rastus žodžius pagal sudėtingumą
 
