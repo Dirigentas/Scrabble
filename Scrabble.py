@@ -1,7 +1,6 @@
 # turimų raidzių įrašymas
 a = ''
-print("Įrašyti turimas raides (tik mažosios raidės):")
-raides=(input())
+raides=(input("Įrašyti turimas raides (tik mažosios raidės):"))
 # importuojami visi lietuviški žodžiai
 with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.txt", encoding="UTF-8") as data_file:
     for line in data_file:
@@ -11,10 +10,28 @@ with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.
         if sorted(list(line)) == sorted(list(raides)):
             a += line
             print(line)
-v = 'nera' if not a.isalpha() else ""
-print(v)
-'''if v == '':
-    raides = '''
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        '''if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)
+        if sorted(list(line))==sorted(list(raides[1:])):
+            print(line)'''
+        
+
+
+
+
+
+print('Su tokiomis raidėmis žodžių nėra' if not a.isalpha() else '!!!')
+
         
         
 
@@ -26,9 +43,7 @@ Dar reikia:
 
   1.  reikia, kad parasytu, kad nerado jei neranda  +
 
-  2.  ieškoti 6 raidžių žodžių jei 7 nėra.
-        pradžioj vieną raidę atmeta ir ieško
-        jei nerandu, tuomet 2 raides atmetu ir ieškau žodžio
+  2.  Surasti visus galimus žodžius ir su mažiau raidžių
 
   3.  reikia, kad surusiuotu rastus žodžius pagal sudėtingumą
 

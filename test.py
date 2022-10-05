@@ -17,5 +17,8 @@ for b in a:
         c+=b
 print(c if c.isalpha() else 'nera')'''
 
-a = (["32 + 698", "3801 - 2"])
-print (a.split())
+import argparse
+
+
+a = 'aras'
+print(a[1:])
