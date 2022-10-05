@@ -10,9 +10,12 @@ for line in a:
     line = line.rstrip() #panaikina ne printable objects
     print(line)'''
 
-a = 'vabalas'
+'''a = 'vabalas'
 c= ""
 for b in a:
     if b=='a':
         c+=b
-print(c if c.isalpha() else 'nera')
+print(c if c.isalpha() else 'nera')'''
+
+a = (["32 + 698", "3801 - 2"])
+print (a.split())

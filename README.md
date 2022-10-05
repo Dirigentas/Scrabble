@@ -16,6 +16,7 @@ Design:
 ## Project features
 
 -   įvedus turimas raides, programa parodo rastus žodžius iš duomenų bazės
+
 -   neradus žodžio iš įvesto raidžių kiekio, atmetama viena raidė, paskui dvi, ir t.t.
     
 -   informavimas ką reikia irašyti
