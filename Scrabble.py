@@ -1,29 +1,27 @@
 # turimų raidzių įrašymas
 a = ''
-raides=(input("Įrašyti turimas raides (tik mažosios raidės):"))
+raides=(input("Įrašyti turimas raides (tik mažosios raidės): "))
 # importuojami visi lietuviški žodžiai
 with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.txt", encoding="UTF-8") as data_file:
     for line in data_file:
 # /n nuėmimas
         line = line.rstrip()
 # žodžio paieška duomenų bazėje
-        if sorted(list(line)) == sorted(list(raides)):
+        if sorted(line) == sorted(raides):
             a += line
             print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        '''if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)
-        if sorted(list(line))==sorted(list(raides[1:])):
-            print(line)'''
+# nuima vieną raidę
+        raides = sorted(raides)
+        for c in range(4): #čia galiu paskui pririšti prie įrašyto raižių len
+            removed = raides.pop(c)
+            if sorted(line) == raides:
+                print (line)
+            raides.append(removed)
+            raides=sorted(raides)
+# nuima dvi raides
+        for c in range(4):
+            
+
         
 
 
