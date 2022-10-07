@@ -17,12 +17,12 @@ with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.
             removed = raides.pop(c)
             if sorted(line) == raides:
                 print (line)
-# nuima dar vieną raides, tai jau 2 nuimtos
+# nuima dar vieną raidę, tai jau 2 nuimtos
             for d in range(6): #čia galiu paskui pririšti prie įrašyto raižių len
                 removed2 = raides.pop(d)
                 if sorted(line) == raides:
                     print (line)
-# nuima dar vieną raides, tai jau 3 nuimtos
+# nuima dar vieną raidę, tai jau 3 nuimtos
                 for e in range(5): #čia galiu paskui pririšti prie įrašyto raižių len
                     removed3 = raides.pop(e)
                     if sorted(line) == raides:
