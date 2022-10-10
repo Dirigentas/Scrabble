@@ -17,7 +17,7 @@ Design:
 
 -   įvedus turimas raides, programa parodo rastus žodžius iš duomenų bazės
 
--   neradus žodžio iš įvesto raidžių kiekio, atmetama viena raidė, paskui dvi, ir t.t.
+-   randami žodžiai 4-7 raidžių ilgumo
     
 -   informavimas ką reikia irašyti
 
