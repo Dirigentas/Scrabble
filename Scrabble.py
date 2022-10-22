@@ -13,19 +13,22 @@ with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.
             print(line)
 # nuima 1 raidę
         raides = sorted(raides)
-        for c in range(7): #čia galiu paskui pririšti prie įrašyto raižių len
+        for c in range(7):
             removed = raides.pop(c)
             if sorted(line) == raides:
+                a += line
                 print (line)
 # nuima dar vieną raidę, tai jau 2 nuimtos
-            for d in range(6): #čia galiu paskui pririšti prie įrašyto raižių len
+            for d in range(6):
                 removed2 = raides.pop(d)
                 if sorted(line) == raides:
+                    a += line
                     print (line)
 # nuima dar vieną raidę, tai jau 3 nuimtos
-                for e in range(5): #čia galiu paskui pririšti prie įrašyto raižių len
+                for e in range(5):
                     removed3 = raides.pop(e)
                     if sorted(line) == raides:
+                        a += line
                         print (line)
                     raides.append(removed3)
                     raides = sorted(raides)
@@ -35,8 +38,6 @@ with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.
             raides=sorted(raides)
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
 
-        
-        
 
 
 '''
@@ -50,7 +51,9 @@ Dar reikia:
 
   4. kad išmestų klaidą įrašius ne 7 raides
 
-  5. surasti klodo klaidą kodėl dubliuoja žodius
+  5. kad butu nesvarbu irasyti didz ar mazasias raides
+
+  6. surasti kodo klaidą kodėl dubliuoja žodius
         (testuoti su 'aeoėbjn')
 
 
