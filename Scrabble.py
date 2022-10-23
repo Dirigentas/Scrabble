@@ -15,6 +15,7 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
 # žodžio paieška duomenų bazėje
         if sorted(line) == sorted(raides):
             a += line
+            # panaikina pasikartojančius žodžius
             if temp != line:
                 print(line)
             temp = line
@@ -24,6 +25,7 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
             removed = raides.pop(c)
             if sorted(line) == raides:
                 a += line
+                # panaikina pasikartojančius žodžius
                 if temp != line:
                     print(line)
                 temp = line
@@ -32,6 +34,7 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                 removed2 = raides.pop(d)
                 if sorted(line) == raides:
                     a += line
+                    # panaikina pasikartojančius žodžius
                     if temp != line:
                         print(line)
                     temp = line
@@ -40,6 +43,7 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                     removed3 = raides.pop(e)
                     if sorted(line) == raides:
                         a += line
+                        # panaikina pasikartojančius žodžius
                         if temp != line:
                             print(line)
                         temp = line
