@@ -1,6 +1,9 @@
 # turimų raidzių įrašymas
 a = ''
 raides = (input("Įrašyti turimas raides (7 raidės be tarpų): ")).lower()
+if not raides.isalpha() and len(raides) != 7 :
+    print('Klaida, prašau įrašyti 7 abėsėlės raides')
+    quit()
 temp = ""
 print('4-7 raidžių žodžiai:')
 # importuojami visi lietuviški žodžiai
@@ -58,11 +61,13 @@ Dar reikia:
 
   3.  reikia, kad surusiuotu rastus žodžius pagal sudėtingumą
 
-  4. kad išmestų klaidą įrašius ne 7 raides
+  4. kad išmestų klaidą įrašius ne 7 raides        +
+    
+    4.1 kad išmestų klaidą įrašius bent vieną tarpą
 
-  5. kad butu nesvarbu irasyti didz ar mazasias raides
+  5. kad butu nesvarbu irasyti didz ar mazasias raides  (Dovis)
 
-  6. surasti kodo klaidą kodėl dubliuoja žodius
+  6. surasti kodo klaidą kodėl dubliuoja žodius    (Dovis)
         (testuoti su 'aeoėbjn')
 
 
