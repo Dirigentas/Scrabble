@@ -63,8 +63,6 @@ Dar reikia:
   3.  reikia, kad surusiuotu rastus žodžius pagal sudėtingumą
 
   4. kad išmestų klaidą įrašius ne 7 raides        +
-    
-    4.1 kad išmestų klaidą įrašius bent vieną tarpą
 
   5. kad butu nesvarbu irasyti didz ar mazasias raides  (Dovis)
 
