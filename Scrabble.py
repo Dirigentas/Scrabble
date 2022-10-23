@@ -1,6 +1,6 @@
 # turimų raidzių įrašymas
 a = ''
-raides=(input("Įrašyti turimas raides (7 mažosios raidės be tarpų): ")).lower()
+raides=(input("Įrašyti turimas raides (7 raidės be tarpų): ")).lower()
 print('4-7 raidžių žodžiai:')
 # importuojami visi lietuviški žodžiai
 with open("C:\\Users\\Aras\\Desktop\\Programavimas\\Python\\Scrabble\\LT zodiai.txt", encoding="UTF-8") as data_file:
