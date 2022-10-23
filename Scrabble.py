@@ -1,6 +1,7 @@
 # turimų raidzių įrašymas
 a = ''
 raides = (input("Įrašyti turimas raides (7 raidės be tarpų): ")).lower()
+# meta klaidą įrašius ne raides ir ne 7 simbolius
 if not raides.isalpha() and len(raides) != 7 :
     print('Klaida, prašau įrašyti 7 abėsėlės raides')
     quit()
