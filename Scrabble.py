@@ -64,15 +64,17 @@ Dar reikia:
 
   2.  Surasti visus galimus žodžius su 4-7 raidėmis +
 
-  3. reikia, kad parasytu tasku skaiciu salia zodzio
-    3.1 surusiuotu rastus žodžius pagal sudėtingumą
+  3. kad išmestų klaidą įrašius ne 7 raides        +
 
-  4. kad išmestų klaidą įrašius ne 7 raides        +
+  4. kad butu nesvarbu irasyti didz ar mazasias raides  (Dovis)
 
-  5. kad butu nesvarbu irasyti didz ar mazasias raides  (Dovis)
-
-  6. surasti kodo klaidą kodėl dubliuoja žodius    (Dovis)
+  5. surasti kodo klaidą kodėl dubliuoja žodius    (Dovis)
         (testuoti su 'aeoėbjn')
+
+  6. reikia, kad parasytu tasku skaiciu salia zodzio
+    6.1 surusiuotu rastus žodžius pagal sudėtingumą
+
+  7. pridėti funkcionalumą, kad būtų galima įrašyti simbolį, kuris reiškia bet kokią lietuviškos abėcėlės raidę
 
 
     '''
