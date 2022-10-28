@@ -4,12 +4,14 @@ temp = ""
 
 # Ši sub-programa paskaičiuoja kiek taškų vertas žodis
 def get_value(word):
-    letter = (['a', 'ą', 'b', 'c', 'č', 'd', 'e', 'ę', 'ė', 'f', 'g', 'h', 'i', 'į', 'y', 'j',
-               'k', 'l', 'm', 'n', 'o', 'p', 'r', 'š', 's', 't', 'u', 'ų', 'ū', 'v', 'z', 'ž'])
-    value = ([1, 8, 2, 10, 8, 2, 1, 10, 4, 10, 4, 10, 1, 8, 5, 4, 1, 2, 2, 1, 1, 3, 1, 5, 1, 1, 1, 6, 8, 4, 10, 6])
+    letter_value = ({'a': 1, 'ą': 8, 'b': 2, 'c': 10, 'č': 8, 'd': 2,
+                     'e': 1, 'ę': 10, 'ė': 4, 'f': 10, 'g': 4, 'h': 10,
+                     'i': 1, 'į': 8, 'y': 5, 'j': 4, 'k': 1, 'l': 2,
+                     'm': 2, 'n': 1, 'o': 1, 'p': 3, 'r': 1, 'š': 5, 's': 1,
+                     't': 1, 'u': 1, 'ų': 6, 'ū': 8, 'v': 4, 'z': 10, 'ž': 6})
     count = 0
     for adding in word:
-        count += value[letter.index(adding)]
+        count += letter_value[adding]
     return count
 
 
