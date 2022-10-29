@@ -1,6 +1,8 @@
 # turimų raidzių įrašymas
 a = ''
 temp = ""
+line_scored = {}
+
 
 # Ši sub-programa paskaičiuoja kiek taškų vertas žodis
 def get_value(word):
@@ -29,9 +31,12 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
 # žodžio paieška duomenų bazėje
         if sorted(line) == sorted(raides):
             a += line
-            # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+            # panaikina pasikartojančius žodžius
             if temp != line:
-                print(f'{line} {get_value(line)} taškai')
+                # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                line_word = line
+                score = get_value(line)
+                line_scored[line_word] = score
             temp = line
 # nuima 1 raidę
         raides = sorted(raides)
@@ -39,18 +44,24 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
             removed = raides.pop(c)
             if sorted(line) == raides:
                 a += line
-                # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+                # panaikina pasikartojančius žodžius
                 if temp != line:
-                    print(f'{line} {get_value(line)} taškai')
+                    # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                    line_word = line
+                    score = get_value(line)
+                    line_scored[line_word] = score
                 temp = line
 # nuima dar vieną raidę, tai jau 2 nuimtos
             for d in range(6):
                 removed2 = raides.pop(d)
                 if sorted(line) == raides:
                     a += line
-                    # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+                    # panaikina pasikartojančius žodžius
                     if temp != line:
-                        print(f'{line} {get_value(line)} taškai')
+                        # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                        line_word = line
+                        score = get_value(line)
+                        line_scored[line_word] = score
                     temp = line
 # nuima dar vieną raidę, tai jau 3 nuimtos
                 for e in range(5):
@@ -59,7 +70,10 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                         a += line
                         # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
                         if temp != line:
-                            print(f'{line} {get_value(line)} taškai')
+                            # Adds found word to a line_scored dictionary
+                            line_word = line
+                            score = get_value(line)
+                            line_scored[line_word] = score
                         temp = line
                     raides.append(removed3)
                     raides = sorted(raides)
@@ -67,6 +81,9 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                 raides = sorted(raides)
             raides.append(removed)
             raides = sorted(raides)
+# sorted(line_scored.items(), key=lambda x: x[1])
+(print(*[str(k) + " " + str(v) + " taškai" for k, v in
+         sorted(line_scored.items(), key=lambda x: x[1], reverse=True)], sep='\n'))
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
 
 
