@@ -1,15 +1,19 @@
 # turimų raidzių įrašymas
 a = ''
 temp = ""
+line_scored = {}
+
 
 # Ši sub-programa paskaičiuoja kiek taškų vertas žodis
 def get_value(word):
-    letter = (['a', 'ą', 'b', 'c', 'č', 'd', 'e', 'ę', 'ė', 'f', 'g', 'h', 'i', 'į', 'y', 'j',
-               'k', 'l', 'm', 'n', 'o', 'p', 'r', 'š', 's', 't', 'u', 'ų', 'ū', 'v', 'z', 'ž'])
-    value = ([1, 8, 2, 10, 8, 2, 1, 10, 4, 10, 4, 10, 1, 8, 5, 4, 1, 2, 2, 1, 1, 3, 1, 5, 1, 1, 1, 6, 8, 4, 10, 6])
+    letter_value = ({'a': 1, 'ą': 8, 'b': 2, 'c': 10, 'č': 8, 'd': 2,
+                     'e': 1, 'ę': 10, 'ė': 4, 'f': 10, 'g': 4, 'h': 10,
+                     'i': 1, 'į': 8, 'y': 5, 'j': 4, 'k': 1, 'l': 2,
+                     'm': 2, 'n': 1, 'o': 1, 'p': 3, 'r': 1, 'š': 5, 's': 1,
+                     't': 1, 'u': 1, 'ų': 6, 'ū': 8, 'v': 4, 'z': 10, 'ž': 6})
     count = 0
     for adding in word:
-        count += value[letter.index(adding)]
+        count += letter_value[adding]
     return count
 
 
@@ -27,9 +31,12 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
 # žodžio paieška duomenų bazėje
         if sorted(line) == sorted(raides):
             a += line
-            # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+            # panaikina pasikartojančius žodžius
             if temp != line:
-                print(f'{line} {get_value(line)} taškai')
+                # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                line_word = line
+                score = get_value(line)
+                line_scored[line_word] = score
             temp = line
 # nuima 1 raidę
         raides = sorted(raides)
@@ -37,18 +44,24 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
             removed = raides.pop(c)
             if sorted(line) == raides:
                 a += line
-                # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+                # panaikina pasikartojančius žodžius
                 if temp != line:
-                    print(f'{line} {get_value(line)} taškai')
+                    # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                    line_word = line
+                    score = get_value(line)
+                    line_scored[line_word] = score
                 temp = line
 # nuima dar vieną raidę, tai jau 2 nuimtos
             for d in range(6):
                 removed2 = raides.pop(d)
                 if sorted(line) == raides:
                     a += line
-                    # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
+                    # panaikina pasikartojančius žodžius
                     if temp != line:
-                        print(f'{line} {get_value(line)} taškai')
+                        # Įdeda žodį ir žodžio vertę į lines_scored dictionary
+                        line_word = line
+                        score = get_value(line)
+                        line_scored[line_word] = score
                     temp = line
 # nuima dar vieną raidę, tai jau 3 nuimtos
                 for e in range(5):
@@ -57,7 +70,10 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                         a += line
                         # panaikina pasikartojančius žodžius ir parašo kiek taškų vertas žodis.
                         if temp != line:
-                            print(f'{line} {get_value(line)} taškai')
+                            # Adds found word to a line_scored dictionary
+                            line_word = line
+                            score = get_value(line)
+                            line_scored[line_word] = score
                         temp = line
                     raides.append(removed3)
                     raides = sorted(raides)
@@ -65,6 +81,8 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                 raides = sorted(raides)
             raides.append(removed)
             raides = sorted(raides)
+(print(*[str(k) + " " + str(v) + " taškai" for k, v in
+         sorted(line_scored.items(), key=lambda x: x[1], reverse=True)], sep='\n'))
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
 
 
