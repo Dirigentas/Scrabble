@@ -54,27 +54,3 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
             raides.append(removed)
             raides = sorted(raides)
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
-
-
-
-'''
-Dar reikia:
-
-  1.  reikia, kad parasytu, kad nerado jei neranda  +
-
-  2.  Surasti visus galimus žodžius su 4-7 raidėmis +
-
-  3. kad išmestų klaidą įrašius ne 7 raides        +
-
-  4. kad butu nesvarbu irasyti didz ar mazasias raides  (Dovis)
-
-  5. surasti kodo klaidą kodėl dubliuoja žodius    (Dovis)
-        (testuoti su 'aeoėbjn')
-
-  6. reikia, kad parasytu tasku skaiciu salia zodzio
-    6.1 surusiuotu rastus žodžius pagal sudėtingumą
-
-  7. pridėti funkcionalumą, kad būtų galima įrašyti simbolį, kuris reiškia bet kokią lietuviškos abėcėlės raidę
-
-
-    '''

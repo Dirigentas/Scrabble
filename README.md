@@ -15,16 +15,24 @@ Design:
 ## Project features
 
 -   įvedus turimas raides, programa parodo rastus žodžius iš duomenų bazės
+-   informavimuoja ką reikia irašyti
 
--   randami žodžiai 4-7 raidžių ilgumo
+-   meta klaidą įrašius netinkamus simbolius
+
+-   meta klaidą įrašius ne 7 raides
+
+-   randami 4-7 raidžių ilgumo žodžiai
     
--   informavimas ką reikia irašyti
-
 -   informavimas jei nerado nei vieno žodžio
 
--   surastų žodžių surušiavimas pagal taškus (taškų parašymas)
+-   taškų parašymas prie surastų žodžių
+
+-   surastų žodžių surušiavimas pagal taškus
 
 ## Authors
 
-Dirigentas: [Github](https://github.com/Dirigentas)
-Footer © 2022 GitHub, Inc. Footer navigation Terms Privacy Security Status Docs Contact GitHub Pricing API Training Blog About
+Aras: [Github](https://github.com/Dirigentas)
+
+Dovydas: [Github](https://github.com/Dovy-Codes)
+
+Footer © 2022 GitHub, Inc.
