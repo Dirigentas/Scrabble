@@ -81,6 +81,7 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
                 raides = sorted(raides)
             raides.append(removed)
             raides = sorted(raides)
+# Ištraukia žodžius iš line_scored norimu formatu, bet prieš tai juos visus surušiuoja nuo daugiausiai taškų surenkančio iki mažiausiai taškų surenkančio.
 (print(*[str(k) + " " + str(v) + " taškai" for k, v in
          sorted(line_scored.items(), key=lambda x: x[1], reverse=True)], sep='\n'))
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
