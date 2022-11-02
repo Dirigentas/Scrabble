@@ -85,3 +85,4 @@ with open("./LT zodiai.txt", encoding="UTF-8") as data_file:
 (print(*[str(k) + " " + str(v) + " taškai" for k, v in
          sorted(line_scored.items(), key=lambda x: x[1], reverse=True)], sep='\n'))
 print('Su išvardintomis raidėmis žodžių nerasta' if not a.isalpha() else '!!!')
+print('test')
